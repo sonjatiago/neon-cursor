@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Cursor Trail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="content">
+    <h1>Neon Cursor Trail</h1>
+    <p>Move your mouse to see the glowing trail in action!</p>
+
+    <!-- Controls for changing trail color and shape -->
+    <div class="controls">
+      <div class="control-item">
+        <label for="colorPicker">Select Trail Color:</label>
+        <input type="color" id="colorPicker" value="#00ffcc" />
+      </div>
+
+      <div class="control-item">
+        <label for="shapePicker">Select Particle Shape:</label>
+        <select id="shapePicker">
+          <option value="circle">Circle</option>
+          <option value="square">Square</option>
+          <option value="line">Line</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

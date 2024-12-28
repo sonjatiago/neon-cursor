@@ -1,0 +1,101 @@
+/* Reset and body styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* Black background for neon effect */
+  color: #00ffcc; /* Default text color */
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Demo content */
+.content {
+  text-align: center;
+  margin-top: 20vh;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #00ffcc; /* Default header color */
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+/* Controls styling */
+.controls {
+  margin-top: 20px;
+}
+
+.control-item {
+  margin: 10px 0;
+}
+
+/* Cursor styles */
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  border: 2px solid #00ffcc; /* Default cursor color */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: difference;
+  animation: pulse 1s infinite;
+  transition: all 0.2s ease;
+}
+
+/* Pulse animation for the cursor */
+@keyframes pulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+}
+
+/* Trail particles - base styles for all shapes */
+.trail {
+  position: absolute;
+  background-color: rgba(0, 255, 204, 0.8); /* Default neon color */
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Default glow effect */
+  pointer-events: none; /* Prevent interaction */
+  animation: fade-out 1s ease-out forwards; /* Fade-out effect */
+}
+
+/* Circle shape style */
+.trail.circle {
+  border-radius: 50%;  /* Circular shape */
+  width: 15px;
+  height: 15px;
+}
+
+/* Square shape style */
+.trail.square {
+  border-radius: 0; /* Square shape */
+  width: 15px;
+  height: 15px;
+}
+
+/* Line shape style */
+.trail.line {
+  border-radius: 0; /* No rounded corners for line */
+  width: 20px;  /* Wider width for the line effect */
+  height: 3px;  /* Small height for the line effect */
+}
+
+/* Fade-out animation for trail particles */
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
